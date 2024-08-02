@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 
-public class Test2Model : PageModel
+public class T2Model : PageModel
 {
     // requires using Microsoft.Extensions.Configuration;
     private readonly IConfiguration Configuration;
     private readonly ILogger _logger;
 
 
-    public Test2Model(IConfiguration configuration, ILogger<TestModel> logger)
+    public T2Model(IConfiguration configuration, ILogger<TestModel> logger)
     {
         Configuration = configuration;
         _logger = logger;
@@ -17,8 +17,8 @@ public class Test2Model : PageModel
 
     public ContentResult OnGet()
     {
-        _logger.LogInformation("LogInformation Test2Model.OnGet executed");
-        _logger.LogError("Test2Model.OnGet executed");
+        _logger.LogInformation("LogInformation T2Model.OnGet executed");
+        _logger.LogError("T2Model.OnGet executed");
         var MyFloatValue = Configuration["MyFloat"];
         var title = Configuration["Position:Title"];
         var name = Configuration["Position:Name"];
