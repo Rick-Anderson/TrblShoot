@@ -18,7 +18,7 @@ public class T2Model : PageModel
     public ContentResult OnGet()
     {
         _logger.LogInformation("LogInformation T2Model.OnGet executed");
-        _logger.LogWarning("LogInformation T2Model.OnGet executed");
+        _logger.LogWarning("LogWarning T2Model.OnGet executed");
         _logger.LogError("T2Model.OnGet executed");
         var MyFloatValue = Configuration["MyFloat"];
         var title = Configuration["Position:Title"];
